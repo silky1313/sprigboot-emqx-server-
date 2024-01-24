@@ -1,0 +1,34 @@
+spring:
+  datasource:
+    driver-class-name: com.p6spy.engine.spy.P6SpyDriver
+    url: jdbc:p6spy:mysql://192.168.228.100:3306/mqtt?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false&zeroDateTimeBehavior=convertToNull&allowPublicKeyRetrieval=true
+    username: root
+    password: silky
+    hikari:
+      minimum-idle: 5
+      maximum-pool-size: 20
+      auto-commit: true
+      idle-timeout: 30000
+      pool-name: Weblog-HikariCP
+      max-lifetime: 1800000
+      connection-timeout: 30000
+      connection-test-query: SELECT 1
+mqtt:
+  open: true
+  #MQTT-服务器连接地址，如果有多个，用逗号隔开
+  host: tcp://192.168.228.100:1883
+  #MQTT-连接服务器默认客户端ID
+  clientId: mqtt_id
+  #MQTT-用户名
+  username: admin
+  #MQTT-密码
+  password: admin
+  #MQTT的订阅主题，发布的时候可以自己自定义主题
+  topic:
+    - send
+    - save
+  #连接超时
+  timeout: 2000
+  #设置会话心跳时间
+  keepalive: 100
+
