@@ -303,9 +303,7 @@ private void save(String message) {
 
 ## 3.后续处理
 
-我会把代码放在github上，如果出现bug请联系我，我会更新到github上。
-
-QQ：2623153066
+我会把代码放在github上，如果出现bug直接提pr就行。
 
 github：https://github.com/silky1313/sprigboot-emqx-server-
 
